@@ -1,4 +1,4 @@
-### Author
+## Author
 Eddah Karambu
 
 ## Description
