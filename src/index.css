@@ -1,1 +1,60 @@
+.Days{
+  font-size: 50px;
+  background-color: grey;
+  max-width: 50%;
+  border-style: initial;
+  align-items: center;
+  margin:auto;
+}
+body{
+  background-color: white;
+}
+
+.kenya{
+  margin-top:30px ;
+  
+}
+.all{
+  display: flex;
+  align-items: center;
+  margin:auto;
+  max-width: 50%;
+  line-height: 40px;
+  margin-top: 10px;
+ 
+  
+}
+.one{
+  border-style: groove;
+  margin-left: 20px;
+}
+.degrees{
+  font-weight: bold;
+  font-size: 20px;
+}
+.sunday{
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.Monday{
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.Tuesday{
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.Wednesday{
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.Thursday{
+  font-weight: bold;
+  font-size: 20px;
+}
+
 
