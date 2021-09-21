@@ -1,11 +1,9 @@
 import React from 'react';
-
 import DayCard from './DayCard';
 import DegreeToggle from './DegreeToggle';
 
 class WeekContainer extends React.Component{
     state={
-        fullData:[],
         dailyData:[],
         degreeType: "fahrenheit"
 
@@ -14,7 +12,7 @@ class WeekContainer extends React.Component{
 
         componentDidMount = () =>{
             const weatherURL=
-            'https://butterfly-cors.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=7eff22e25433f5b9b8fe934eb8d1a7e7'
+            'https://butterfly-cors.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=c2df072d1be94685bda115343212109&q=Nairobi&days=3&aqi=no&alerts=no'
             fetch(weatherURL ,{
                 crossDomain:true,
                 headers : { 
@@ -26,10 +24,10 @@ class WeekContainer extends React.Component{
             
             .then(res => res.json())
             .then(data => {
-                console.log(data, 'da')
-                const dailyData=data.list.filter(reading => reading.dt_txt.includes("18:00:00"))
+                const dailyData=data.forecast.forecastday.map(forecast=> forecast.hour.filter(hour=>hour.time.includes("13:00")))
+
+                console.log(dailyData, 'da')
                 this.setState({
-                    fullData:data.list,
                     dailyData:dailyData
                 },() =>console.log(this.state))
                 })
