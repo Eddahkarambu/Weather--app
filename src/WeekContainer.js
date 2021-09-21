@@ -37,7 +37,7 @@ class WeekContainer extends React.Component{
         
             
                 const historyURL=
-                `http://api.weatherapi.com/v1/history.json?key=c2df072d1be94685bda115343212109&q=Nairobi&dt=${moment().subtract(3,'d').format('YYYY-MM-DD')}&end_dt=${moment().subtract(1,'d').format('YYYY-MM-DD')}`
+                `https://butterfly-cors.herokuapp.com/http://api.weatherapi.com/v1/history.json?key=c2df072d1be94685bda115343212109&q=Nairobi&dt=${moment().subtract(3,'d').format('YYYY-MM-DD')}&end_dt=${moment().subtract(1,'d').format('YYYY-MM-DD')}`
 
                 fetch(historyURL ,{
                     crossDomain:true,
