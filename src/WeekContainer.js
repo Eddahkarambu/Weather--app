@@ -14,8 +14,9 @@ class WeekContainer extends React.Component{
 
         componentDidMount = () =>{
             const weatherURL=
-            'http://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=7eff22e25433f5b9b8fe934eb8d1a7e7'
+            'https://butterfly-cors.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=7eff22e25433f5b9b8fe934eb8d1a7e7'
             fetch(weatherURL ,{
+                crossDomain:true,
                 headers : { 
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
