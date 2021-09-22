@@ -61,11 +61,21 @@ class WeekContainer extends React.Component{
                 }
 
             formatDayCards =()=>{
-                return this.state.dailyData.map((reading,index) => <DayCard reading={reading} degreeType={this.state.degreeType} key={index}/>)
+                return this.state.dailyData? this.state.dailyData.map((reading,index) => <DayCard reading={reading} degreeType={this.state.degreeType} key={index}/>):
+                (<div class="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>)
             }
 
             Cards =()=>{
-                return this.state.historyData.map((reading,index) => <DayCard reading={reading} degreeType={this.state.degreeType} key={index}/>)
+                return this.state.historyData? this.state.historyData.map((reading,index) => <DayCard reading={reading} degreeType={this.state.degreeType} key={index}/>):
+                (<div class="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>)
             }
 
 
@@ -86,15 +96,17 @@ class WeekContainer extends React.Component{
                     <h2>forecast</h2>
                     <div className="row justify-content-center">
                     {this.formatDayCards()}
+                    </div>
                     
 
-                    </div>
                     <h2>history</h2>
                     <div className="row justify-content-center">
                     {this.Cards()}
                     
 
                     </div>
+
+                    
 
                 </div>
                 
