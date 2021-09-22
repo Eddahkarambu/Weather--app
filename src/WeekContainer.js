@@ -14,7 +14,7 @@ class WeekContainer extends React.Component{
 
         componentDidMount = () =>{
             const forecastURL=
-            'https://butterfly-cors.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=c2df072d1be94685bda115343212109&q=Nairobi&days=3&aqi=no&alerts=no'
+            `https://butterfly-cors.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_MY_API_KEY}&q=Nairobi&days=3&aqi=no&alerts=no`
             fetch(forecastURL ,{
                 crossDomain:true,
                 headers : { 
@@ -37,7 +37,7 @@ class WeekContainer extends React.Component{
         
             
                 const historyURL=
-                `https://butterfly-cors.herokuapp.com/http://api.weatherapi.com/v1/history.json?key=c2df072d1be94685bda115343212109&q=Nairobi&dt=${moment().subtract(3,'d').format('YYYY-MM-DD')}&end_dt=${moment().subtract(1,'d').format('YYYY-MM-DD')}`
+                `https://butterfly-cors.herokuapp.com/http://api.weatherapi.com/v1/history.json?key=${process.env.REACT_APP_MY_API_KEY}&q=Nairobi&dt=${moment().subtract(3,'d').format('YYYY-MM-DD')}&end_dt=${moment().subtract(1,'d').format('YYYY-MM-DD')}`
 
                 fetch(historyURL ,{
                     crossDomain:true,
