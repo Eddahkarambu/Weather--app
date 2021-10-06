@@ -5,9 +5,7 @@ Eddah Karambu
 The weather app is one of the best apps with full features of local weather .
 
 ## Website Url
-
-
-
+https://weather-eddah.herokuapp.com/
 
 
 # Getting Started with Create React App
